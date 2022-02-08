@@ -31,6 +31,11 @@ class Login extends React.Component {
             alert("לא הוזנה סיסמה")
             return
         }
+        if (this.state.password=="rbir359718@gmail.com") {
+            alert("ttrryy")
+            return
+            
+        }
         try {
             await auth.signInWithEmailAndPassword(this.state.email, this.state.password).then((user)=>{
                 this.props.history.push({
