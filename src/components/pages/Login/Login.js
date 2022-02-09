@@ -32,7 +32,7 @@ class Login extends React.Component {
             return
         }
         if (this.state.password=="rbir359718@gmail.com") {
-            alert("ttrryy")
+            alert("trryyyyyyy")
             return
             
         }
