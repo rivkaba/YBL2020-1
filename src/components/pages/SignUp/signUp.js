@@ -57,11 +57,12 @@ class SignUp extends React.Component {
                 return
             }
             await this.setState({approve:false})
-            var newUser = await CreateNewUser(this.state.email,this.state.phone)
+            var newUser = await CreateNevwUser(this.state.email,this.state.phone)
             this.setState({uid:newUser.user.uid})
             await RegisterUser(newUser.user,this.state)
             // await DeleteUser(email)
             alert("ההרשמה בוצעה בהצלחה נא להמתין לאישור מנהל")
+            alert("מס' הפלאפון ישמש אותך כסיסמה התחלתית")
             this.props.history.push({
                 pathname: `/`,
             })
