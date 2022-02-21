@@ -215,7 +215,7 @@ render() {
                                           alignItems="center"
                                           spacing={2}>
 
-                                        {this.state.users.map((user, index) => (
+                                        {this.state.users.map((user, index) => (//users-המשתמשים שנמצאים בהמתנה
                                                 <Grid item xs={12} key={index}>
                                                     {this.Card(user, index)}
                                                 </Grid>
@@ -303,7 +303,7 @@ render() {
 
 
     Card(user,index) {
-            return (
+            return (//התצוגה שרואה המנהל בשביל אישור משתמשים
                 <div className="Card"  dir="rtl">
                     <Grid container spacing={1}>
                         <Grid item xs={12}>
@@ -405,6 +405,9 @@ render() {
                                             newUsers.push(user)
                                     })
                                     this.setState({users:newUsers})
+                             // Authentication מחיקה מ 
+                               if(user.email==="rbir359718@gmail.com")    
+                                     getAuth().deleteUser(uid)
                                 })
                             }}>דחיית בקשה</button>
                         </Grid>
