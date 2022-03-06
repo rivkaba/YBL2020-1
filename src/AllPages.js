@@ -24,11 +24,13 @@ import AttendReport from "./components/pages/Users/Manager/mngAttendReport";
 import FeedbackStudents from "./components/pages/Users/Manager/mngStudFeedback";
 import FeedbackGuides from "./components/pages/Users/Manager/mngGuideFeedback";
 import UpdatesFirebase from "./components/pages/Users/Manager/UpdatesFirebase";
+import OldGroups from "./components/pages/Users/OldGroups";
 import StudentFeedback from "./components/pages/Users/Student/stud_feedback";
 import Profile from "./components/pages/Users/profile";
 import GuideReports from "./components/pages/Users/Guide/guide_attend_report";
 import GuideFeedback from "./components/pages/Users/Guide/guide_feedback";
 import Wait from "./components/pages/Users/await";
+import IdCard from './components/pages/Users/IdCard';
 
 function LoadPage() {
     return (
@@ -51,12 +53,13 @@ function LoadPage() {
                     <Route exact path="/User/:404" component={notFound} />
 
 
+
                     <Route exact path="/Student/:id" component={Students} />
                     <Route exact path="/Student/:id/Feedback" component={StudentFeedback} />
                     <Route exact path="/Student/:id/Profile" component={Profile} />
                     <Route exact path="/Student/:id/:404" component={notFound} />
                     <Route exact path="/Student/:id/:page/:404" component={notFound} />
-
+{ /*   <Route exact path="/Student/:id/:IdCard" component={IdCard} />  ****************************************************                      **/}
 
                     <Route exact path="/Guide/:id" component={Guides} />
                     <Route exact path="/Guide/:id/Reports" component={GuideReports} />
@@ -64,18 +67,19 @@ function LoadPage() {
                     <Route exact path="/Guide/:id/profile" component={Profile} />
                     <Route exact path="/Guide/:id/:404" component={notFound} />
                     <Route exact path="/Guide/:id/:page/:404" component={notFound} />
-
+{/*    <Route exact path="/Guide/:id/:IdCard" component={IdCard} />  ****************************************************                      **/}
 
                     <Route exact path="/Manager/:id" component={Managers} />
                     <Route exact path="/Manager/:id/UserApproval" component={UserApproval} />
                     <Route exact path="/Manager/:id/Updates" component={UpdatesFirebase} />
+                  { /*    <Route exact path="/Manager/:id/:OldGroups" component={OldGroups} />  ****************************************************                      **/}
                     <Route exact path="/Manager/:id/Reports" component={AttendReport} />
                     <Route exact path="/Manager/:id/Feedbacks/Guide" component={FeedbackGuides} />
                     <Route exact path="/Manager/:id/Feedbacks/Student" component={FeedbackStudents} />
                     <Route exact path="/Manager/:id/profile" component={Profile} />
                     <Route exact path="/Manager/:id/:404" component={notFound} />
                     <Route exact path="/Manager/:id/:page/:404" component={notFound} />
-
+{/*    <Route exact path="/Manager/:id/:IdCard" component={IdCard} />  ****************************************************                      **/}
 
 
 
@@ -97,15 +101,19 @@ function LoadPage() {
                     <Route exact path="/TempManager" component={TempManager} />
                     <Route exact path="/TempManager/UserApproval" component={UserApproval} />
                     <Route exact path="/TempManager/Updates" component={UpdatesFirebase} />
+                    { /*    <Route exact path="/TempManager/OldGroups" component={OldGroups} />  ****************************************************                      **/}
+
                     <Route exact path="/TempManager/Reports" component={AttendReport} />
                     <Route exact path="/TempManager/Feedbacks/Guide" component={FeedbackGuides} />
                     <Route exact path="/TempManager/Feedbacks/Student" component={FeedbackStudents} />
                     <Route exact path="/TempManager/profile" component={Profile} />
 
-
+ 
                     <Route exact path="/test_g_a_r" component={test_g_a_r} />
                     <Route exact path="/test_g_f" component={test_g_f} />
                     <Route exact path="/:404" component={notFound} />
+                    {/*    <Route exact path="/:IdCard" component={IdCard} />  ****************************************************                      **/}
+
                 </Switch>
             </Router>
         </div>
